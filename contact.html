@@ -1,126 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Contact | Pavan Ranawaka</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Poppins, sans-serif;
-            background: #222;
-            color: #e5e5e5;
-        }
-        .wrapper {
-            max-width: 960px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        header {
-            padding: 30px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-        .logo i {
-            background: #007ced;
-            border-radius: 50%;
-            padding: 10px;
-            color: white;
-            margin-right: 10px;
-        }
-        .logo-text {
-            font-size: 24px;
-            color: white;
-        }
-        nav .navlinks {
-            list-style: none;
-            display: flex;
-        }
-        nav .navlinks li {
-            margin-left: 20px;
-        }
-        nav .navlinks li a {
-            color: #e5e5e5;
-            text-decoration: none;
-        }
-        .contact-section {
-            padding: 40px 0;
-        }
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .btn {
-            padding: 12px;
-            border: none;
-            border-radius: 25px;
-            background-color: #007ced;
-            color: white;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .social {
-            margin-top: 20px;
-        }
-        .social a {
-            color: #e5e5e5;
-            margin-right: 15px;
-            font-size: 20px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Contact | Pavan Ranawaka</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('images/aaa.jpg') no-repeat center center/cover;
+      color: #e5e5e5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+
+    header {
+      padding: 30px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo i {
+      background: #007ced;
+      border-radius: 50%;
+      padding: 10px;
+      color: white;
+      margin-right: 10px;
+    }
+
+    .logo-text {
+      font-size: 24px;
+      color: white;
+    }
+
+    nav .navlinks {
+      list-style: none;
+      display: flex;
+    }
+
+    nav .navlinks li {
+      margin-left: 20px;
+    }
+
+    nav .navlinks li a {
+      color: #e5e5e5;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-section {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      margin-top: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .contact-section h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .contact-section p {
+      font-size: 14px;
+      margin-bottom: 25px;
+      color: #ccc;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px 15px;
+      border: none;
+      border-radius: 10px;
+      background-color: #444;
+      color: white;
+      font-size: 14px;
+    }
+
+    .contact-form textarea {
+      resize: none;
+    }
+
+    .btn {
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      background-color: #007ced;
+      color: white;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #005fab;
+    }
+
+    .social {
+      margin-top: 25px;
+      text-align: center;
+    }
+
+    .social a {
+      color: #e5e5e5;
+      margin: 0 10px;
+      font-size: 22px;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    .social a:hover {
+      color: #007ced;
+      transform: scale(1.2);
+    }
+
+    @media(max-width: 600px) {
+      .contact-section {
+        padding: 25px;
+      }
+
+      .logo-text {
+        font-size: 20px;
+      }
+
+      nav .navlinks {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    
+
+  </style>
 </head>
 <body>
-    <div class="wrap1">
-    <div class="wrapper">
-        <header>
-            <div class="logo">
-                <i class="fa-solid fa-p"></i>
-                <div class="logo-text">Pavan Ranawaka</div>
-            </div>
-            <nav>
-                <ul class="navlinks">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </header>
+  <div class="wrapper">
+    <header>
+      <div class="logo">
+        <i class="fa-solid fa-p"></i>
+        <div class="logo-text">Pavan Ranawaka</div>
+      </div>
+      <nav>
+        <ul class="navlinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
 
-   
-        <section class="contact-section">
-            <h1>Contact Me</h1>
-            <p>Just want to say hello, I’d love to hear from you!</p>
-            <form action="https://formspree.io/f/mjkwvbgo" method="POST">
-                <input type="text" name="Name" placeholder="Your Name" required>
-                <input type="email" name="Email" placeholder="Your Email" required>
-                <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
-            <div class="social">
-                <a href="https://www.facebook.com/share/19zY37AzaC/"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.linkedin.com/in/pavanmadhuranga?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0xIRoJacQaSNnmHTCO%2BJpA%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="https://www.instagram.com/pavan_ranawaka?igsh=anVma2ZvaXFrbWVw"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://wa.me/qr/MX23VHXDY6T6O1"><i class="fa-brands fa-whatsapp"></i></a>
-            </div>
-        </section>
-    
-    </div>
-    </div>
+    <section class="contact-section">
+      <h1>Contact Me</h1>
+      <p>Just want to say hello? I’d love to hear from you!</p>
+      <form class="contact-form" action="https://formspree.io/f/mjkwvbgo" method="POST" onsubmit="clearForm()">
+        <input type="text" name="Name" placeholder="Your Name" required />
+        <input type="email" name="Email" placeholder="Your Email" required />
+        <textarea name="Message" rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+      <div class="social">
+        <a href="https://www.facebook.com/share/19zY37AzaC/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/pavanmadhuranga" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="https://www.instagram.com/pavan_ranawaka" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://wa.me/qr/MX23VHXDY6T6O1" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </section>
+  </div>
+
+  <!-- <script>
+    window.addEventListener('pageshow', function (event) {
+      if (event.persisted || (window.performance && window.performance.navigation.type === 2)) {
+        document.getElementById("contactForm").reset();
+      }
+    });
+  </script> -->
+
+  <script>
+  window.addEventListener('pageshow', function(event) {
+    // If returning to the page via back/forward button
+    if (event.persisted || (performance.navigation.type === 2)) {
+      const form = document.getElementById('contact-form');
+      if (form) form.reset();
+    }
+  });
+</script>
+  
+
 </body>
 </html>

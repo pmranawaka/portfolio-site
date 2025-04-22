@@ -7,6 +7,206 @@
     <title>Pavan Ranawaka | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f5f5f5;
+        }
+
+        /* Hero Section */
+        .hero-header {
+            background: url('images/aaa.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: white;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            background: #007ced;
+            border-radius: 50%;
+            padding: 10px;
+            color: white;
+            margin-right: 10px;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .togglebtn {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 21px;
+        }
+
+        .togglebtn span {
+            background-color: white;
+            height: 3px;
+            width: 100%;
+        }
+
+        .navlinks {
+            list-style: none;
+            display: flex;
+        }
+
+        .navlinks li {
+            margin-left: 20px;
+        }
+
+        .navlinks li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .navlinks li a:hover {
+            color: #007ced;
+        }
+
+        .hero-pic img {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .hero-text h5 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn {
+            background-color: #007ced;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #005fab;
+        }
+
+        .social {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social a {
+            color: white;
+            font-size: 24px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .social a:hover {
+            color: #007ced;
+            transform: scale(1.1);
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .hero-text h1 {
+                font-size: 40px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+
+            .togglebtn {
+                display: flex;
+            }
+
+            .navlinks {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 10px;
+                padding: 10px;
+                width: 200px;
+            }
+
+            .navlinks.open {
+                display: flex;
+            }
+
+            .navlinks li {
+                margin-bottom: 15px;
+            }
+
+            .navlinks li a {
+                color: white;
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="hero-header">
@@ -34,7 +234,7 @@
                     <img src="images/pavan.jpeg" alt="profile pic">
                 </div>
                 <div class="hero-text">
-                    <h5>Hi I'm <span class="input">Web Developer</span></h5>
+                    <h5>Hi, I'm <span class="input">Web Developer</span></h5>
                     <h1>Pavan Ranawaka</h1>
                     <p>I’m an undergraduate IT student at SLIIT with a passion for creating user-friendly and visually appealing websites. I specialize in WordPress development and have experience building responsive and dynamic websites. Currently, I’m seeking opportunities to grow as a web developer and contribute to impactful projects.</p>
 
@@ -45,10 +245,9 @@
 
                     <div class="social">
                         <a href="https://www.facebook.com/share/19zY37AzaC/"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://www.linkedin.com/in/pavanmadhuranga?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0xIRoJacQaSNnmHTCO%2BJpA%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://www.instagram.com/pavan_ranawaka?igsh=anVma2ZvaXFrbWVw"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/pavanmadhuranga"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/pavan_ranawaka"><i class="fa-brands fa-instagram"></i></a>
                         <a href="https://wa.me/qr/MX23VHXDY6T6O1"><i class="fa-brands fa-whatsapp"></i></a>
-        
                     </div>
                 </div>
             </div>
@@ -74,4 +273,3 @@
     </script>
 </body>
 </html>
-
